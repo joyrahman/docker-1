@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: stream
+spec:
+  parallelism: 1
+  completions: 1
+  template:
+    metadata:
+      name: stream-pod
+    spec:
+      containers:
+      - name: stream-container
+        image: benchmarks/centos-gcc-stream:latest
+      nodeSelector:
+        color: blue
+restartPolicy: Never
