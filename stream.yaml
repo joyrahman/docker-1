@@ -3,8 +3,8 @@ kind: Job
 metadata:
   name: stream
 spec:
-  parallelism: 1
-  completions: 1
+  parallelism: 2
+  completions: 2
   template:
     metadata:
       name: stream-pod
@@ -13,5 +13,5 @@ spec:
       - name: stream-container
         image: benchmarks/centos-gcc-stream:latest
       nodeSelector:
-        color: blue
+        color2: red
       restartPolicy: Never
