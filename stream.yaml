@@ -13,5 +13,5 @@ spec:
       - name: stream-container
         image: benchmarks/centos-gcc-stream:latest
       nodeSelector:
-        color2: red
+        color: green
       restartPolicy: Never
