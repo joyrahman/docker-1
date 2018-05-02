@@ -1,6 +1,6 @@
 #!/bin/bash
 MB=$(free | grep Mem | tr -s ' ' | cut -d ' ' -f 4);
-ARRAYSIZE=$(( $MB * 120 ));
+ARRAYSIZE=$(( $MB * 40 ));
 
 gcc -fstrict-aliasing -mcmodel=large -Ofast -mtune=native -march=native -fopenmp /usr/src/stream/stream.c -DSTREAM_ARRAY_SIZE=$ARRAYSIZE -o stream-gcc
 
