@@ -7,8 +7,8 @@ RUN 	mkdir /usr/src/stream/ && \
 
 # Get startup file
 RUN	cd /root/ && \
-        curl -OSL https://raw.githubusercontent.com/hpc-training/docker/master/benchmarks/centos-gcc-stream/run-benchmark.sh && \
-	#curl -OSL https://raw.githubusercontent.com/joyrahman/stream/master/benchmarks/centos-gcc-stream/run-benchmark.sh && \
+        #curl -OSL https://raw.githubusercontent.com/hpc-training/docker/master/benchmarks/centos-gcc-stream/run-benchmark.sh && \
+	curl -OSL https://raw.githubusercontent.com/joyrahman/stream/master/benchmarks/centos-gcc-stream/run-benchmark.sh && \
 	chmod a+x ./run-benchmark.sh
 
 # Command to start when image is run
