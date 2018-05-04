@@ -9,7 +9,7 @@ SOCKETS=$(lscpu | grep Socket | tr -s ' ' | cut -d ' ' -f2);
 
 export OMP_NUM_THREADS=$(( $CORESPERSOCKET * $SOCKETS ));
 export GOMP_CPU_AFFINITY="0-$(($OMP_NUM_THREADS - 1))"
-for i in `seq 1 100`
+for i in `seq 1 75`
 do 
  ./stream-gcc
 done
